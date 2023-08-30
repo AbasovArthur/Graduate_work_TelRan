@@ -1,14 +1,26 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import logo from '../../media/logo.png'
+import cart from '../../media/shopping_bag.svg'
+import s from './style.module.css'
 
 export default function NavMenu() {
   return (
-    <div>
-      <Link to='/' >Main Page</Link>
-      <Link to='/products' >All products</Link>
-      <Link to='/categories' >Categories</Link>
-      <Link to='/sale'>All sales</Link>
+    <div className={s.nav_head}>
+      <img className={s.logo} src={logo} alt="logo Garten" />
+
+      <div className={s.nav_menu}>
+        <Link to='/categories'>
+          <button>Catalog</button>
+        </Link>
+
+        <div className={s.nav_page}>
+          <Link to='/' >Main Page</Link>
+          <Link to='/products' >All products</Link>
+          <Link to='/sale'>All sales</Link>
+        </div>
+      </div>
+      <img className={s.cart} src={cart} alt="Cart" />
     </div>
   )
 }
-{/* <Route path='/categories' element={<AllCategoriesPage />} /> */}
