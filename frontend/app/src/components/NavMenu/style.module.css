@@ -1,6 +1,6 @@
 .logo       {grid-area: logo; justify-self: center}
 a button    {grid-area: button;}
-.nav_page   {grid-area: pages; justify-self: end; gap: 50px;}
+.nav_page   {grid-area: pages; justify-self: end}
 .cart       {grid-area: cart; justify-self: center}
 
 .nav_head{
@@ -47,6 +47,7 @@ a button:hover {
 .logo {
     width: 72px;
     height: 72px;
+    margin: 5px;
 }
 
 .cart {

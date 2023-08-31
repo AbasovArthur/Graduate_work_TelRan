@@ -1,5 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch} from 'react-redux';
+import { useEffect } from 'react';
 import MainPage from './pages/MainPage';
 import AllCategoriesPage from './pages/AllCategoriesPage';
 import ProductsByCategoriesPage from './pages/ProductsByCategoriesPage';
@@ -10,8 +12,13 @@ import NotFoundPage from './pages/NotFoundPage';
 import NavMenu from './components/NavMenu';
 import Footer from './components/Footer';
 import AllSalesPage from './pages/AllSalesPage';
+import { getAllCategories } from './requests/catregories_req';
 
 function App() {
+
+  const dispatch = useDispatch()
+  useEffect(() => dispatch(getAllCategories), [])
+
   return (
     <div className="App">
       <NavMenu />
