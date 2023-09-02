@@ -1,4 +1,4 @@
-import { loadAllCategoriesAction } from "../store/redusers/categoriesReduser";
+import { loadAllCategoriesAction } from "../store/redusers/categoriesReducer";
 
 export const getAllCategories = (dispatch) => {
     fetch('http://localhost:3333/categories/all')
