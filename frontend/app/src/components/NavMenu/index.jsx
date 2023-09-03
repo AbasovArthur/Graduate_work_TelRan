@@ -15,9 +15,10 @@ export default function NavMenu() {
       </Link>
 
       <div className={s.nav_page}>
-        <Link to='/' >Main Page</Link>
-        <Link to='/products' >All products</Link>
-        <Link to='/sale'>All sales</Link>
+        <Link to='/' >Main</Link>
+        <Link to='/products' >Products</Link>
+        <Link to='/sale'>Sale</Link>
+        <Link to='/sale'>Contact</Link>
       </div>
 
       <img className={s.cart} src={cart} alt="Cart" />

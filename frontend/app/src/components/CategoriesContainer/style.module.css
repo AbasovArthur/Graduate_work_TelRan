@@ -1,0 +1,36 @@
+h1 {
+    color: #000000;
+    text-align: left;
+    font: 700 40px/130% "Montserrat", sans-serif;
+    position: relative;
+    padding: 10px 0 40px;
+}
+
+.container {
+    text-align: center;
+    margin: auto 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-content: left;
+    align-items: center;
+}
+
+@media(max-width: 1080px){
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+@media(max-width: 800px){
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .h1 {
+        /* text-align: center; */
+    }
+    
+}
