@@ -15,9 +15,3 @@ img {
     object-fit: contain;
     border-radius: 8px;
 }
-
-.link {
-    text-decoration: none;
-    color: #000000;
-    font: 600 18px/130% "Montserrat", sans-serif;
-}

@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  font: 600 18px/130% "Montserrat", sans-serif;
+}
