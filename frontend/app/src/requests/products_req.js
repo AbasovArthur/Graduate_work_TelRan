@@ -5,6 +5,6 @@ export const getProductsbyCategory = id => {
         fetch(`http://localhost:3333/categories/${id}`)
             .then(res => res.json())
             // .then(json => console.log(json.category));
-            .then(json => dispatch(loadProductByCategory(json.data)))
+            .then(json => dispatch(loadProductByCategory(json)))
     }
 }

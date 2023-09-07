@@ -8,18 +8,20 @@ export default function ProductsByCategoriesPage() {
 
   const {id} = useParams()
   const dispatch = useDispatch()
-  useEffect(() => dispatch(getProductsbyCategory(id)),[])
+  useEffect(() => dispatch(getProductsbyCategory(id)),[ id ])
 
-  const products_by_category_state = useSelector(state => state.productsByCategory)
+  const { data, category } = useSelector(state => state.productsByCategory)
 
-  console.log(products_by_category_state.category);
-
-
-  
   return (
     <div>
-      {/* <h1>{products_by_category_state.category.title}</h1> */}
-      <ProductsContainer products={products_by_category_state} />
+      <h1>{category && category.title }</h1>
+      <img src={category && category.image } alt="" />
+      <ProductsContainer products={data} />
     </div>
   )
 }
+
+
+  //[ id ] это ID категории, полученное из useParams. Если пользователь перейдет на другую страницу категории (из /category/1 в /category/2), id изменится, и useEffect выполнится снова, чтобы загрузить новые продукты для этой категории.
+
+  //(id) — это аргумент,в getProductsbyCategory. Эта функция выполняет HTTP-запрос к серверу для получения данных определенной категории. Указывает, какую категорию вы хотите получить, и id категории служит для этого "указателем"

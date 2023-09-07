@@ -1,9 +1,4 @@
 
-.container {
-    text-align: center;
-    margin: auto 20px;
-}
-
 .categories {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
