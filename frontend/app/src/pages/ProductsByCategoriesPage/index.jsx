@@ -15,7 +15,9 @@ export default function ProductsByCategoriesPage() {
   return (
     <div>
       <h1>{category && category.title }</h1>
-      <img src={category && category.image } alt="" />
+
+      {/* <img src={category && category.image } alt="" /> */}
+
       <ProductsContainer products={data} />
     </div>
   )
