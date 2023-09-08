@@ -8,26 +8,18 @@ export default function ProductCard({ id, title, image, description, discont_pri
 
   return (
     <Link to={`/products/${id}`}>
-
       <div>
         <img src={`http://localhost:3333${image}`} alt={title} />
-
         <div className={s.title_container}>
-
           <div className={s.price}>
-
             <h2>{price}$</h2>
-
             {discont_price ?
               <p className={s.discont}>{Math.floor(price - price * discont_price / 100)}$</p> : ''}
-
             {discont_price ?
               <p className={s.prozent}>-{discont_price}%</p> : ''}
-
           </div>
           <p className={s.title}>{title}</p>
         </div>
-
       </div>
     </Link>
   )

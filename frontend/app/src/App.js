@@ -13,13 +13,15 @@ import NavMenu from './components/NavMenu';
 import Footer from './components/Footer';
 import AllSalesPage from './pages/AllSalesPage';
 import { getAllCategories } from './requests/catregories_req';
-import { getProductsbyCategory } from './requests/products_req';
+import { getAllProducts, getProductsbyCategory, getSingleProduct } from './requests/products_req';
 
 function App() {
 
   const dispatch = useDispatch()
   useEffect(() => dispatch(getAllCategories), [])
   useEffect(() => dispatch(getProductsbyCategory),[])
+  useEffect(() => dispatch(getAllProducts),[])
+  useEffect(() => dispatch(getSingleProduct),[])
 
 
   return (

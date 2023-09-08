@@ -5,7 +5,7 @@ export default function AllCategoriesPage() {
 
   return (
     <div>
-      <CategoriesContainer />
+      <CategoriesContainer h1={'Categories'}/>
     </div>
   )
 }
