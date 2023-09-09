@@ -9,7 +9,7 @@ export default function ProductCard({ id, title, image, description, discont_pri
   return (
     <Link to={`/products/${id}`}>
       <div>
-        <img src={`http://localhost:3333${image}`} alt={title} />
+        <img className={s.img} src={`http://localhost:3333${image}`} alt={title} />
         <div className={s.title_container}>
           <div className={s.price}>
             <h2>{price}$</h2>

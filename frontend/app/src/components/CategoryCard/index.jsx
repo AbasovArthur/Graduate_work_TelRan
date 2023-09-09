@@ -8,7 +8,7 @@ export default function CategoryCard({ id, title, image, createdAt, updatedAt })
       <Link to={`/categories/${id}`}>
         
       <div className={s.card}>
-        <img src={`http://localhost:3333${image}`} alt={title} />
+        <img className={s.img} src={`http://localhost:3333${image}`} alt={title} />
 
         <p >{title}</p>
       </div>

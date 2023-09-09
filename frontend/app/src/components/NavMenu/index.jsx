@@ -7,8 +7,9 @@ import s from './style.module.css'
 export default function NavMenu() {
   return (
     <div className={s.nav_head}>
-
-      <img className={s.logo} src={logo} alt="logo Garten" />
+      <Link to='/'>
+        <img className={s.logo} src={logo} alt="logo Garten" />
+      </Link>
 
       <Link to='/categories'>
         <button>Catalog</button>

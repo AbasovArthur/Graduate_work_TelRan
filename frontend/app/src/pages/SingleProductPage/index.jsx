@@ -32,7 +32,7 @@ export default function SingleProductPage() {
 
   return (
     <div>
-      <h3>{title}</h3>
+      <h3 className={s.title}>{title}</h3>
       <div className={s.container_card}>
         {image &&
           <img className={s.img} src={`http://localhost:3333${image}`} alt={title} />
@@ -40,12 +40,13 @@ export default function SingleProductPage() {
         <div className={s.card_descr}>
 
           <div className={s.price}>
-            <h2>{price}$</h2>
+            <h2 className={s.h2}>{price}<span>$</span></h2>
             {discont_price ? <p className={s.discont}>{Math.floor(price - price * discont_price / 100)}$</p> : ''}
             {discont_price ? <p className={s.prozent}>-{discont_price}%</p> : ''}
           </div>
 
           <button className={s.button}>To card</button>
+
           <div className={s.title_descr}>
             <p>Description</p>
             <p>{description}</p>
