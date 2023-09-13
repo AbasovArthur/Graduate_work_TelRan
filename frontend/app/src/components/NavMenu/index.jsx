@@ -12,7 +12,7 @@ export default function NavMenu() {
       </Link>
 
       <Link to='/categories'>
-        <button>Catalog</button>
+        <button className={s.button}>Catalog</button>
       </Link>
 
       <div className={s.nav_page}>
@@ -21,9 +21,10 @@ export default function NavMenu() {
         <Link to='/sale'>Sale</Link>
         <Link to='/sale'>Contact</Link>
       </div>
+      <Link to='/cart'>
+        <img className={s.cart} src={cart} alt="Cart" />
+      </Link>
 
-      <img className={s.cart} src={cart} alt="Cart" />
-      
     </div>
   )
 }

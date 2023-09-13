@@ -6,9 +6,6 @@ import s from './style.module.css'
 export default function CategoriesContainer({h1}) {
 
   const category_store = useSelector(state => state.categories)
-  
-  // console.log(category_store);
-  // const h1 = 'Categories'
 
   return (
     <div className={s.container}>

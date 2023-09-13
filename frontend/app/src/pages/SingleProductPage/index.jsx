@@ -3,16 +3,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom';
 import { getSingleProduct } from '../../requests/products_req';
 import s from './style.module.css'
+import { addToCartAction } from '../../store/redusers/cartReducer';
 
 
 export default function SingleProductPage() {
 
-  const {id} = useParams()
+  const { id } = useParams()
   const dispatch = useDispatch()
-  useEffect(()=> dispatch(getSingleProduct(id)), [id])
+  useEffect(() => dispatch(getSingleProduct(id)), [id])
 
   const single_product_state = useSelector(state => state.singleProduct)
-  
+
   // Getting [0] element of the array - [singleProduct]:
   const product = single_product_state[0]
 
@@ -45,7 +46,11 @@ export default function SingleProductPage() {
             {discont_price ? <p className={s.prozent}>-{discont_price}%</p> : ''}
           </div>
 
-          <button className={s.button}>To card</button>
+          <div
+            onClick={() => dispatch(addToCartAction({ id, title, image, description, discont_price, price }))}
+            className={s.button}
+          >
+            To card</div>
 
           <div className={s.title_descr}>
             <p>Description</p>

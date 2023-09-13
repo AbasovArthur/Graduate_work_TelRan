@@ -1,15 +1,20 @@
+.offer  {grid-area: offer; justify-self: center; align-self: center;}
+.img  {grid-area: img;}
+
+
+
 .banner {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'offer img';
     background-color: #A1E2EB;
     height: 600px;
-    align-items: center;
     position: relative;
     overflow: hidden;
 }
 
 .offer {
-    padding: 50px;
+    z-index: 1;
 }
 
 .img {
@@ -21,14 +26,12 @@
     transition: height 0.8s ease;
 }
 
-.banner>div>h1 {
+.banner > div > h1 {
     display: flex;
     flex-direction: column;
     color: #ffffff;
-    text-align: left;
     font: 700 80px/130% "Montserrat", sans-serif;
     transition: height 0.3s ease;
-
 }
 
 .banner > div > h1 > span:last-child {
@@ -40,7 +43,6 @@
     border: none;
     border-radius: 13px;
     padding: 25px 50px;
-    gap: 10px;
     font: 700 25px/130% "Montserrat", sans-serif;
 }
 
@@ -50,10 +52,7 @@
         position: absolute;
         bottom: -133px;
         right: -203px;
-
     }
-
-    
 }
 
 @media(max-width: 800px){
@@ -61,4 +60,9 @@
         display: none;
     }
     
+    .banner {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'offer';
+        height: 600px;
+    }
 }

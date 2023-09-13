@@ -8,9 +8,9 @@
 }
 
 .logo       {grid-area: logo; justify-self: stretch}
-a button    {grid-area: button;}
+.button    {grid-area: button; justify-self: end}
 .nav_page   {grid-area: pages; justify-self: end}
-.cart       {grid-area: cart; justify-self: center}
+.cart       {grid-area: cart; }
 
 .nav_head{
     display: grid;
@@ -23,15 +23,12 @@ a button    {grid-area: button;}
     display: flex;
     justify-content: flex-end;
     gap: 50px;
-    
 }
 .nav_page a {
-    text-decoration: none;
-    color: black;
     font: 500 16px/130% "Montserrat", sans-serif;
 }
 
-a button{
+.button{
     background-color: white; color: green; 
     padding: 10px;
     border: 2px solid green; border-radius: 5px;
@@ -39,7 +36,7 @@ a button{
     font: 700 16px "Montserrat", sans-serif;
 }
 
-a button:hover {
+.button:hover {
     border-radius: 10px;
     background-color: green;
     color: white;

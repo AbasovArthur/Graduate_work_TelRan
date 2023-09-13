@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.products img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+} 
+
+.products{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.products_descr{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.count{
+    display: flex;
+}
