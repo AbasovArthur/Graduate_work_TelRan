@@ -10,7 +10,9 @@ export default function ProductsContainer({ products, h1 }) {
         <div className={s.container}>
             <h1>{h1}</h1>
             <div className={s.products_container}>
-                {products && products.map(el => <ProductCard key={el.id} {...el} />)}
+                {products && products
+                    .filter(el => el.show_product)
+                    .map(el => <ProductCard key={el.id} {...el} />)}
             </div>
         </div>
     )

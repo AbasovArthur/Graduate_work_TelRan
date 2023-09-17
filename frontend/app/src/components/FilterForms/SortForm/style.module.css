@@ -1,0 +1,14 @@
+.sort_form {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+} 
+.sort_form select {
+    padding: 9px 10px;
+    border-radius: 7px;
+    font: 500 16px/130% "Montserrat", sans-serif;
+    color: #797979;
+}
+.sort_form p {
+    font: 600 20px/130% "Montserrat", sans-serif;
+}
