@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getProductsbyCategory } from '../../requests/products_req'
 import ProductsContainer from '../../components/ProductsContainer'
+import DiscFiltrSortForm from '../../components/FilterForms/DiscFiltrSortForm'
 
 export default function ProductsByCategoriesPage() {
 
@@ -12,8 +13,14 @@ export default function ProductsByCategoriesPage() {
 
   const { data, category } = useSelector(state => state.productsByCategory)
 
+  // этот стейт принять в фильтрах и попробовать применить так, чтобы отработала фильтраия на странице п-тов с кат-ми
+  const category_filterForm = useSelector(state => state.categories)
+
+  // console.log(data);
+
   return (
     <div>
+      <DiscFiltrSortForm category_filterForm={category_filterForm}/>
       <h1>{category && category.title }</h1>
 
       {/* <img src={category && category.image } alt="" /> */}

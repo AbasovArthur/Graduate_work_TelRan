@@ -4,7 +4,7 @@ export const loadAllCategoriesAction = payload => ({type: LOAD_ALL_CATEGORIES, p
 
 export const categoriesReducer = (state = [], action) => {
     if(action.type === LOAD_ALL_CATEGORIES){
-        return action.payload
+        return action.payload.map(el => ({...el, show_product: true}))
     } else {
         return state
     }
