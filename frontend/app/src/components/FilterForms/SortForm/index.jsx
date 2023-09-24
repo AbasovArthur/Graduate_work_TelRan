@@ -2,10 +2,16 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { sortProductAction } from '../../../store/redusers/allProductsReduser'
 import s from './style.module.css'
+import { sortProdByCategorieAction } from '../../../store/redusers/productsByCategoriesReducer'
+
 export default function SortForm() {
 
     const dispatch = useDispatch()
-    const order = e => dispatch(sortProductAction(e.target.value))
+
+    const order = e => {
+        dispatch(sortProductAction(e.target.value))
+        dispatch(sortProdByCategorieAction(e.target.value))
+    }
 
     return (
         <div>
@@ -21,3 +27,4 @@ export default function SortForm() {
         </div>
     )
 }
+
