@@ -1,0 +1,10 @@
+.form_item {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 60%;
+}
+.for_card {
+    width: 100%;
+    
+}

@@ -1,8 +1,10 @@
+//frontend\app\src\components\Cart\index.jsx
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './style.module.css'
-import { clearCartAction } from '../../store/redusers/cartReducer';
+// import { clearCartAction } from '../../store/redusers/cartReducer';
+import FormItem from '../FormItem';
 
 
 export default function Cart({ h1 }) {
@@ -36,10 +38,7 @@ export default function Cart({ h1 }) {
                             <span> $</span>
                         </p>
                     </div>
-                    <form className={s.details_form}>
-                        <input type='number' placeholder='Phone number' />
-                        <button>Order</button>
-                    </form>
+                        <FormItem style='for_card'/>
                 </div>
 
             </div>

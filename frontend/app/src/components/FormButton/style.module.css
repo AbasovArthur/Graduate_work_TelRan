@@ -1,0 +1,32 @@
+/* frontend\app\src\components\FormButton\style.module.css */
+.button {
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 5px;
+  /* background-color: white; */
+  background-color: red;
+  color: green;
+  cursor: pointer;
+  font: 700 16px "Montserrat", sans-serif;
+}
+
+.button:hover {
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+}
+
+.for_card {
+  background-color: green;
+  /* background-color: red; */
+  color: white;
+  cursor: pointer;
+  font: 700 16px "Montserrat", sans-serif;
+}
+
+.for_card:hover {
+  border-radius: 20px;
+  background-color: white;
+  color: green;
+}

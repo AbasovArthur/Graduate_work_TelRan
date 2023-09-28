@@ -41,31 +41,6 @@
     font: 600 20px/130% "Montserrat", sans-serif;
 }
 
-.details_form {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.details_form input {
-    padding: 15px;
-    border-radius: 16px;
-}
-
-.details_form button{
-    background-color: green; color: white; 
-    padding: 10px;
-    border: 2px solid green; border-radius: 16px;
-    cursor: pointer;
-    font: 700 16px "Montserrat", sans-serif;
-}
-
-.details_form button:hover {
-    border-radius: 20px;
-    background-color: white;
-    color: green;
-}
-
 .clear_btn {
     background-color: darkmagenta;
     color: white;
