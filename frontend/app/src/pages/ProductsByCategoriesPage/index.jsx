@@ -13,18 +13,10 @@ export default function ProductsByCategoriesPage() {
 
   const { data, category } = useSelector(state => state.productsByCategory)
 
-  // этот стейт принять в фильтрах и попробовать применить так, чтобы отработала фильтраия на странице п-тов с кат-ми
-  const category_filterForm = useSelector(state => state.categories)
-
-  // console.log(data);
-
   return (
     <div>
-      <DiscFiltrSortForm category_filterForm={category_filterForm}/>
+      <DiscFiltrSortForm discount_show={true}/>
       <h1>{category && category.title }</h1>
-
-      {/* <img src={category && category.image } alt="" /> */}
-
       <ProductsContainer products={data} />
     </div>
   )

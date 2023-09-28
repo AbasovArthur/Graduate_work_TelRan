@@ -10,7 +10,7 @@ export default function AllProductsPage() {
 
   return (
     <div>
-      <DiscFiltrSortForm /> 
+      <DiscFiltrSortForm discount_show={true}/> 
       <ProductsContainer products={all_products_state} h1={'All products'} />
     </div>
   )
