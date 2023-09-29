@@ -3,7 +3,23 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
     width: 60%;
+    position: relative;
 }
 .for_card {
     width: 100%;
+}
+
+.error_msg {
+    color: gray;
+    font-size: 12px;
+    text-align: end;
+    z-index: 1;
+    position: absolute;
+    position: absolute;
+    top: -30px;
+    right: 30px;
+}
+
+.for_card .error_msg {
+
 }
