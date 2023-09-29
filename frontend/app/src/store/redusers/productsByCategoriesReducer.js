@@ -9,7 +9,7 @@ export const sortProdByCategorieAction = payload => ({ type: SORT_PRODUCTS, payl
 export const filterProdByCategorieAction = payload => ({ type: FILTER_PRODUCTS, payload });
 export const getDiscountProdByCategorieAction = payload => ({ type: GET_DISCOUNT_PRODUCTS, payload });
 
-export const productsByCategoriesReducer = (state = {}, action) => {
+export const productsByCategoriesReducer = (state = { data: [] }, action) => {
 
     if (action.type === LOAD_PRODUCT_BY_CATEGORY) {
 

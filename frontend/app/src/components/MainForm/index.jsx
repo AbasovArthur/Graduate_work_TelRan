@@ -2,7 +2,7 @@
 import React from 'react'
 import img from '../../media/gnome.png'
 import s from './style.module.css'
-import FormItem from '../FormItem'
+import FormItem from '../FormUI/FormItem'
 
 export default function MainForm() {
     return (
@@ -13,7 +13,7 @@ export default function MainForm() {
                     <span>5% off</span>
                     <span>on the first order</span>
                 </h1>
-                <FormItem />
+                <FormItem input_style_item='input_for_main' title_btn='Get a discount'/>
             </div>
         </div>
     )

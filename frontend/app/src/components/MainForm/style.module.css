@@ -1,11 +1,11 @@
 .form{
     background: linear-gradient(
         262.69deg,
-        rgba(51, 153, 51, 1) 0%,
-        rgba(0, 99, 0, 1) 100%
+        rgba(0, 99, 0, 1) 100%,
+        rgba(51, 153, 51, 1) 0%
       );
       width: auto;
-      height: 476px;
+      height: auto;
       padding: 30px;
 }
 

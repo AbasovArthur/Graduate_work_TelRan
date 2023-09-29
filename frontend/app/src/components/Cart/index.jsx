@@ -1,10 +1,9 @@
-//frontend\app\src\components\Cart\index.jsx
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './style.module.css'
 // import { clearCartAction } from '../../store/redusers/cartReducer';
-import FormItem from '../FormItem';
+import FormItem from '../FormUI/FormItem';
 
 
 export default function Cart({ h1 }) {
@@ -12,7 +11,11 @@ export default function Cart({ h1 }) {
     const cart_state = useSelector(state => state.cart)
     const dispatch = useDispatch()
 
-    const total = cart_state.reduce((acc, { price, count }) => acc + price * count, 0).toFixed(2).toString().split('.');
+    const total = cart_state
+        .reduce((acc, { price, count }) => acc + price * count, 0)
+        .toFixed(2)
+        .toString()
+        .split('.');
 
     return (
         <div>
@@ -28,7 +31,9 @@ export default function Cart({ h1 }) {
                         </div>
                     </>)
                 }
+
                 <div className={s.details}>
+
                     <h3>Order details</h3>
                     <div className={s.total_price}>
                         <p>Total price</p>
@@ -38,7 +43,13 @@ export default function Cart({ h1 }) {
                             <span> $</span>
                         </p>
                     </div>
-                        <FormItem style='for_card'/>
+
+                    <FormItem
+                        input_style_item='input_for_cart'
+                        btn_style_item='btn_for_card'
+                        title_btn='Order'
+                    />
+
                 </div>
 
             </div>
