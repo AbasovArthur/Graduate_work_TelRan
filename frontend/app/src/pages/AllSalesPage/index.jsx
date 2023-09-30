@@ -1,3 +1,4 @@
+//frontend\app\src\pages\AllSalesPage\index.jsx
 import React from 'react'
 import { useSelector } from 'react-redux'
 import ProductsContainer from '../../components/ProductsContainer'
@@ -9,6 +10,8 @@ export default function AllSalesPage() {
 // console.log(all_products_state);
 
 const products_like_sale = all_products_state.filter(el=>el.discont_price)
+
+// export const products_like_sale
 
   return (
     <div>
