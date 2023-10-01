@@ -4,19 +4,20 @@
 }
 
 .cart {
-    width: 30px; height: 30px;
+    width: 30px; height: auto;
 }
 
-.logo       {grid-area: logo; }
-.button     {grid-area: button; justify-content: center; }
-.nav_page   {grid-area: pages; justify-self: end}
-.cart       {grid-area: cart;}
+.logo       { grid-area: logo;   }
+.button     { grid-area: button; }
+.nav_page   { grid-area: pages;  }
+.cart       { grid-area: cart;   }
 
 .nav_head{
     display: grid;
     grid-template-areas: "logo button pages cart";
     grid-template-columns: 100px 1fr 3fr 1fr; 
     align-items: center;
+    justify-items: center;
 }
 
 .nav_page {

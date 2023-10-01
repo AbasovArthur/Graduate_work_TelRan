@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HiOutlineShoppingBag } from 'react-icons/hi'
 import logo from '../../media/logo.png'
-import cart from '../../media/shopping_bag.svg'
 import s from './style.module.css'
 
 export default function NavMenu() {
@@ -22,7 +22,7 @@ export default function NavMenu() {
         <Link to='/sale'>Contact</Link>
       </div>
       <Link to='/cart'>
-        <img className={s.cart} src={cart} alt="Cart" />
+        <HiOutlineShoppingBag className={s.cart}/>
       </Link>
 
     </div>

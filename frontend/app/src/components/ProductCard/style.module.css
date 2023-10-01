@@ -35,23 +35,28 @@
 }
 
 .add_btn {
-  visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
     font: 600 18px/130% "Montserrat", sans-serif;
     background: #f1fff1;
     border-radius: 10px;
     border: 2px solid #339933;
     color: green;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px;
+    width: 55%;
     margin: auto 0;
-    width: auto;
-    /* height: 72px; */
     position: absolute;
-    top: -50%;
-    left: 0%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart_item {
+    position: relative;
 }
 
 .cart_item:hover .add_btn {
-    visibility: visible;
-    position: relative;
+    opacity: 80%;
+
 }

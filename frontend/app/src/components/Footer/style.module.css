@@ -1,0 +1,67 @@
+.contact{grid-area: contact;}
+.address{grid-area: address;}
+.map    {grid-area: map;}
+
+
+.footer {
+    margin: 50px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(4, 1fr); */
+    gap: 50px;
+    grid-template-areas: "contact address"
+                         "map     map";
+}
+
+.footer > div:not(:last-child){
+    display: grid;
+    grid-template-rows: repeat(3, 90px);
+    align-items: baseline;
+    gap: 20px;
+}
+                        
+.contact h2, .address h2, .address h2 a {
+    font: 700 40px/130% "Montserrat", sans-serif;
+}
+
+.contact p span {
+  font: 600 70px/130% "Montserrat", sans-serif;
+}
+
+.address h2 a {
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.icon {
+    width: 50px;
+    height: auto;
+}
+
+.social_media {
+  font: 600 15px/130% "Montserrat", sans-serif;
+  display: flex;
+  gap: 50px;
+}
+
+.instagram, .whats_app {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.work_hours{
+    margin: auto 0;
+}
+
+.work_hours p:first-child{
+  font: 500 18px/130% "Montserrat", sans-serif;
+}
+
+.work_hours p:last-child{
+    font: 600 24px/130% "Montserrat", sans-serif;
+  }
