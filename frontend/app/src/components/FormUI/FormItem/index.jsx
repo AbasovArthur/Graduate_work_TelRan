@@ -3,6 +3,7 @@ import FormButton from '../FormButton'
 import FormInput from '../FormInput'
 import s from './style.module.css'
 import { useForm } from 'react-hook-form'
+import { orderPhoneNum, salePhoneNum } from '../../../requests/products_req'
 
 export default function FormItem(props) {
 
@@ -18,11 +19,20 @@ export default function FormItem(props) {
     }
   })
 
+  /*
   const submit = data => {
-    console.log(data)
+    // console.log(data)
+    salePhoneNum(data)
+    orderPhoneNum(data)
     reset()
   };
+*/
 
+const submit = data => {
+  // console.log(data)
+  props.onSubmit(data)
+  reset()
+};
   return (
     <form onSubmit={handleSubmit(submit)}>
 

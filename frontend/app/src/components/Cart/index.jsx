@@ -4,6 +4,7 @@ import CartItem from '../CartItem';
 import s from './style.module.css'
 // import { clearCartAction } from '../../store/redusers/cartReducer';
 import FormItem from '../FormUI/FormItem';
+import { orderPhoneNum } from '../../requests/products_req';
 
 
 export default function Cart({ h1 }) {
@@ -48,6 +49,7 @@ export default function Cart({ h1 }) {
                         input_style_item='input_for_cart'
                         btn_style_item='btn_for_card'
                         title_btn='Order'
+                        onSubmit={orderPhoneNum}
                     />
 
                 </div>

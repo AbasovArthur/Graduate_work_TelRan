@@ -35,9 +35,11 @@ export default function MainPage() {
 
   const shuffleArray = (array) => {
     return array.reduce((acc, value) => {
+
       const randIndex = Math.floor(Math.random() * (acc.length + 1));
       return [...acc.slice(0, randIndex), value, ...acc.slice(randIndex)];
     }, []);
+    
   }
 
   const products_like_sale = shuffleArray(products_state
