@@ -50,6 +50,7 @@ export default function Cart({ h1 }) {
                         btn_style_item='btn_for_card'
                         title_btn='Order'
                         onSubmit={orderPhoneNum}
+                        title_modalWindow='order product'
                     />
 
                 </div>

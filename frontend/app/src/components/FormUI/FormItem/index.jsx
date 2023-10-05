@@ -1,11 +1,14 @@
-import React from 'react'
+//frontend\app\src\components\FormUI\FormItem\index.jsx
+import React, { useEffect, useState } from 'react'
 import FormButton from '../FormButton'
 import FormInput from '../FormInput'
 import s from './style.module.css'
 import { useForm } from 'react-hook-form'
-import { orderPhoneNum, salePhoneNum } from '../../../requests/products_req'
+import ModalWindow from '../ModalWindow'
 
 export default function FormItem(props) {
+
+  const [showModal, setShowModal] = useState(false);
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
     // mode: 'onChange'
@@ -19,20 +22,13 @@ export default function FormItem(props) {
     }
   })
 
-  /*
+
   const submit = data => {
-    // console.log(data)
-    salePhoneNum(data)
-    orderPhoneNum(data)
+    props.onSubmit(data)
+    setShowModal(true)
     reset()
   };
-*/
 
-const submit = data => {
-  // console.log(data)
-  props.onSubmit(data)
-  reset()
-};
   return (
     <form onSubmit={handleSubmit(submit)}>
 
@@ -43,10 +39,17 @@ const submit = data => {
           name='mob_number'
           style_item={props.input_style_item}
           {...numRegister}
-          />
-          {errors.mob_number && 
-            <p className={s.error_msg}>{errors.mob_number.message}</p>}
-        <FormButton btn_style_item={props.btn_style_item}>{props.title_btn}</FormButton>
+        />
+        {errors.mob_number &&
+          <p className={s.error_msg}>{errors.mob_number.message}</p>}
+
+        <FormButton
+          btn_style_item={props.btn_style_item}
+        >
+          {props.title_btn}
+        </FormButton>
+
+        <ModalWindow onInitiate={showModal} title_modalWindow={props.title_modalWindow}/>
       </div>
     </form>
   )

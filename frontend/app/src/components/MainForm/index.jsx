@@ -14,7 +14,12 @@ export default function MainForm() {
                     <span>5% off</span>
                     <span>on the first order</span>
                 </h1>
-                <FormItem input_style_item='input_for_main' title_btn='Get a discount' onSubmit={salePhoneNum}/>
+                <FormItem 
+                    input_style_item='input_for_main' 
+                    title_btn='Get a discount' 
+                    onSubmit={salePhoneNum}
+                    title_modalWindow='you will get a 5% discount'
+                />
             </div>
         </div>
     )
