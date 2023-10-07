@@ -1,0 +1,25 @@
+.icon {
+    display: none;
+}
+
+.link {
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width: 576px){
+    .icon {
+        display: block;
+    }
+
+    .link {
+        display: none;
+    }
+    
+    .link.active {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}

@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  max-width: 1080px;
+  min-width: 576px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font: 600 18px/130% "Montserrat", sans-serif;
+  /* font: 500 16px/130% "Montserrat", sans-serif; */
+
+}
+
+h1 {
+  color: #000000;
+  text-align: left;
+  font: 700 40px/130% "Montserrat", sans-serif;
+  position: relative;
+  padding: 10px 0 40px;
+}
