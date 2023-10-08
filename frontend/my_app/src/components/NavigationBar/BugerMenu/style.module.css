@@ -18,8 +18,21 @@
     
     .link.active {
         position: fixed;
+        right: 10px;
+
         display: flex;
         flex-direction: column;
         gap: 25px;
+
+        border-radius: 16px;
+        padding: 20px 10px;
+        margin: 15px 0;
+        background-color: green;
+        opacity: 0.8;
     }
+
+    .link.active a {
+        color: white;
+    }
+
 }

@@ -1,3 +1,8 @@
+.container{
+    width: 465px;
+    margin: 0 auto;
+}
+
 .social_media {
     font: 600 15px/130% "Montserrat", sans-serif;
     display: flex;
@@ -20,4 +25,10 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+}
+
+@media (max-width: 980px){
+    .tel_number span {
+        /* font: 600 30px/130% "Montserrat", sans-serif; */
+    }
 }
