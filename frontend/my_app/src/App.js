@@ -1,5 +1,5 @@
 import './App.css';
-import Footer from './components/Footer';
+import Footer from './components/FooterArea/Footer';
 import NavMenu from './components/NavigationBar/NavMenu';
 import { Routes, Route } from 'react-router-dom'
 import MainPage from './pages/MainPage';

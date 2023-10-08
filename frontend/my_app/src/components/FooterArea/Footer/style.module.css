@@ -1,0 +1,32 @@
+.contact{grid-area: contact;}
+.address{grid-area: address;}
+.map    {grid-area: map;}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    grid-template-areas: "contact address"
+                         "map     map";
+}
+
+.footer > div:not(:last-child){
+    display: grid;
+    align-items: baseline;
+    gap: 20px;
+}
+
+@media (max-width: 980px){
+    .footer {
+        grid-template-areas: "contact"
+                             "address"
+                             "map";
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .footer > div:not(:last-child){
+        display: grid;
+        gap: 10px;
+    }
+} 

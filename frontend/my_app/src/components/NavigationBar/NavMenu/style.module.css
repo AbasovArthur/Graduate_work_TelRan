@@ -9,7 +9,7 @@
 .cart       { grid-area: cart;      }
 
 .logo {
-    /* justify-self: start; */
+    justify-self: start;
 }
 
 .nav_head {

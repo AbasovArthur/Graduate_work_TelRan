@@ -1,0 +1,23 @@
+.social_media {
+    font: 600 15px/130% "Montserrat", sans-serif;
+    display: flex;
+    gap: 50px;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+}
+
+.tel_number span {
+    font: 600 50px/130% "Montserrat", sans-serif;
+}
+
+.instagram,
+.whats_app {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}

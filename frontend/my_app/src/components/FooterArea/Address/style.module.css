@@ -1,0 +1,18 @@
+.link {
+    font: 700 30px/130% "Montserrat", sans-serif;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+}
+
+.work_hours {
+    margin: auto 0;
+}
+
+.work_hours p:first-child {
+    font: 500 18px/130% "Montserrat", sans-serif;
+}
+
+.work_hours p:last-child {
+    font: 600 24px/130% "Montserrat", sans-serif;
+}
