@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    margin: auto 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: stretch;
+}
+
+@media(max-width: 1080px){
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }    
+}
+@media(max-width: 800px){
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}

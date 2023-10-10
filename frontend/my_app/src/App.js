@@ -10,8 +10,15 @@ import SingleProductPage from './pages/SingleProductPage';
 import AllSalesPage from './pages/AllSalesPage';
 import CartPage from './pages/CartPage';
 import NotFoundPage from './pages/NotFoundPage';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getAllCategories } from './requests/categories_req';
 
 function App() {
+
+  const dispatch = useDispatch()
+  useEffect(()=> dispatch(getAllCategories), [])
+
   return (
     <div className="App">
       <NavMenu />
