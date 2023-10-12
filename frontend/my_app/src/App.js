@@ -13,11 +13,14 @@ import NotFoundPage from './pages/NotFoundPage';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllCategories } from './requests/categories_req';
+import { getAllProducts } from './requests/products_req';
 
 function App() {
 
   const dispatch = useDispatch()
   useEffect(()=> dispatch(getAllCategories), [])
+  useEffect(()=> dispatch(getAllProducts), [])
+
 
   return (
     <div className="App">

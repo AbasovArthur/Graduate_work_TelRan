@@ -6,14 +6,14 @@ import CategorieCard from '../CategorieCard'
 
 export default function CategoriesContainer({h1}) {
 
-  const categorie_store = useSelector(state => state.categories)
+  const categories_store = useSelector(state => state.categories)
+  console.log(categories_store);
 
   return (
     <div className={s.container}>
       <h1>{h1}</h1>
-      <div className={s.categories}>
-
-        { categorie_store.map(el => <CategorieCard key={el.id} {...el} />) }
+      <div className={s.categorie}>
+        { categories_store.map(el => <CategorieCard key={el.id} {...el} />) }
       </div>
     </div>
   )

@@ -3,21 +3,22 @@
     margin: auto 20px;
 }
 
-.categorie {
+.products_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-content: left;
     align-items: center;
-    justify-items: stretch;
 }
 
 @media(max-width: 1080px){
-    .categorie {
+    .products_container {
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
     }    
 }
+
 @media(max-width: 800px){
-    .categorie {
+    .products_container {
         grid-template-columns: repeat(2, 1fr);
-    } 
+    }
 }
