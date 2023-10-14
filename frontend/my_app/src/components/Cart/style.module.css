@@ -1,0 +1,51 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: end;
+    justify-items: center;
+    gap: 50px;
+}
+.container_cart {
+    display: grid;
+    gap: 20px;
+}
+
+.details{
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 100%;
+    height: 300px;
+    padding: 15px 15px;
+    display: grid;
+    grid-template-rows: 50px 1fr 2fr;
+    font: 600 28px/130% "Montserrat", sans-serif;
+}
+
+.total_price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total_price p:first-child {
+    font: 500 24px/130% "Montserrat", sans-serif;
+}
+
+.total_price p:last-child span:first-child {
+    font: 600 32px/130% "Montserrat", sans-serif;
+}
+
+.total_price p:last-child span:nth-child(2) {
+    font: 600 28px/130% "Montserrat", sans-serif;
+}
+.total_price p:last-child span:nth-child(3) {
+    font: 600 20px/130% "Montserrat", sans-serif;
+}
+
+.clear_btn {
+    background-color: darkmagenta;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+  }

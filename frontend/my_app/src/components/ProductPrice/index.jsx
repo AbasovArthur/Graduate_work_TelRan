@@ -4,13 +4,8 @@ import { useSelector } from 'react-redux'
 
 export default function ProductPrice({ price, discont_price, style_single_page  }) {
 
-    // const style_price = () => {
-    //     [s.price, style_single_page].join(' ')
-    // }
-    console.log("Received style:", style_single_page);
 
     return (
-        // <div className={style_price}>
         <div className={[s.price, s[style_single_page]].join(' ')}>
             {discont_price ?
                 <>

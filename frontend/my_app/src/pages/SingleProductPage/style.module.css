@@ -41,7 +41,20 @@
     font: 600 20px/130% "Montserrat", sans-serif;
 }
 
+.button{
+    background-color: white; color: green; 
+    padding: 25px;
+    text-align: center;
+    width: 60%;
+    border: 2px solid green; border-radius: 5px;
+    cursor: pointer;
+    font: 700 28px/130% "Montserrat", sans-serif;
+}
 
+.button:hover {
+    border-radius: 10px;
+    background-color: green; color: white; 
+}
 
 @media(max-width: 1080px){
     .container_card {

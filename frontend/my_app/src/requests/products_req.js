@@ -1,4 +1,4 @@
-import { loadAllProductsAction } from "../store/reducers/allProductsReduser";
+import { loadAllProductsAction } from "../store/reducers/allProductsReducer";
 
 
 export const getAllProducts = dispatch => {

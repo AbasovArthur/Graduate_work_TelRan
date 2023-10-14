@@ -3,10 +3,13 @@ import s from './style.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import ProductPrice from '../../components/ProductPrice';
+import { addToCartAction } from '../../store/reducers/cartReducer';
 
 export default function SingleProductPage() {
 
   const { id } = useParams();
+  const dispatch = useDispatch()
+
 
   const single_product_state = useSelector( state => state.allProducts )
 
@@ -35,6 +38,13 @@ export default function SingleProductPage() {
       <div className={s.card_descr}>
 
           <ProductPrice price={price} discont_price={discont_price} style_single_page='style_single_page'/>
+
+          
+          <div
+            onClick={() => dispatch(addToCartAction({ id, title, image, description, discont_price, price }))}
+            className={s.button}
+          >
+            To card</div>
 
         <div className={s.title_descr}>
           <p>Description</p>
