@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './style.module.css'
@@ -9,6 +9,11 @@ import { orderPhoneNum } from '../../requests/products_req';
 export default function Cart({ h1 }) {
 
     const cart_state = useSelector(state => state.cart)
+
+    useEffect(() => {
+      localStorage.setItem('shopping_cart', JSON.stringify(cart_state))
+    }, [cart_state])
+
     const dispatch = useDispatch()
 
     const total = cart_state
