@@ -17,3 +17,24 @@
     font: 500 16px/130% "Montserrat", sans-serif;
 
 }
+
+.style_single_page  {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 0 20px;
+    width: 80%;
+}
+
+.style_single_page h2 {
+    font: 600 70px/130% "Montserrat", sans-serif;
+}
+
+.style_single_page p {
+  font: 600 20px/130% "Montserrat", sans-serif;
+}
+
+@media(max-width: 880px){
+
+}
+
