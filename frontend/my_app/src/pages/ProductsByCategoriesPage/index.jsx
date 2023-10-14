@@ -14,7 +14,7 @@ export default function ProductsByCategoriesPage() {
   const title_category = category.find(el => el.id === +id)
   const product_by_category = all_product.filter(el => el.categoryId === +id)
 
-  console.log(product_by_category);
+  // console.log(product_by_category);
 
   return (
     <div>

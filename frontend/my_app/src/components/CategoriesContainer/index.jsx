@@ -7,7 +7,7 @@ import CategorieCard from '../CategorieCard'
 export default function CategoriesContainer({h1}) {
 
   const categories_store = useSelector(state => state.categories)
-  console.log(categories_store);
+  // console.log(categories_store);
 
   return (
     <div className={s.container}>
