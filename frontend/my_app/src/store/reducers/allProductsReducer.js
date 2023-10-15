@@ -8,6 +8,8 @@ export const sortProductAction = payload => ({ type: SORT_PRODUCTS, payload });
 export const filterProductsAction = payload => ({ type: FILTER_PRODUCTS, payload });
 export const getDiscountPropuctsAction = payload => ({ type: GET_DISCOUNT_PRODUCTS, payload });
 
+
+
 export const allProductsReducer = (state = [], action) => {
     if (action.type === LOAD_ALL_PRODUCTS) {
         return action.payload.map(el => ({ ...el, show_product: true }))

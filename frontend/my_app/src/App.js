@@ -10,7 +10,7 @@ import SingleProductPage from './pages/SingleProductPage';
 import AllSalesPage from './pages/AllSalesPage';
 import CartPage from './pages/CartPage';
 import NotFoundPage from './pages/NotFoundPage';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllCategories } from './requests/categories_req';
 import { getAllProducts } from './requests/products_req';
@@ -18,14 +18,20 @@ import { getAllProducts } from './requests/products_req';
 function App() {
 
   const dispatch = useDispatch()
-  useEffect(()=> dispatch(getAllCategories), [])
-  useEffect(()=> dispatch(getAllProducts), [])
+  useEffect(() => dispatch(getAllCategories), [])
+  useEffect(() => dispatch(getAllProducts), [])
+
+  const cart_state = useSelector(state => state.cart)
+
+  useEffect(() => {
+    localStorage.setItem('shopping_cart', JSON.stringify(cart_state))
+  }, [cart_state])
 
 
   return (
     <div className="App">
       <NavMenu />
-        <Routes>
+      <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/categories' element={<AllCategoriesPage />} />
         <Route path='/categories/:id' element={<ProductsByCategoriesPage />} />
@@ -34,7 +40,7 @@ function App() {
         <Route path='/sale' element={<AllSalesPage />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='*' element={<NotFoundPage />} />
-        </Routes>
+      </Routes>
       <Footer />
     </div>
   );

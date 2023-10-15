@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './style.module.css'
 import { useDispatch } from 'react-redux'
-import { sortProductAction } from '../../../store/reducers/allProductsReducer'
+import { sortProductAction } from '../../../../store/reducers/allProductsReducer'
 
 export default function SortForm() {
 

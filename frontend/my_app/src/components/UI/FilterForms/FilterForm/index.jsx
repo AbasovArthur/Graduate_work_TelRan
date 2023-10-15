@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './style.module.css'
 import { useDispatch } from 'react-redux';
-import { filterProductsAction } from '../../../store/reducers/allProductsReducer';
+import { filterProductsAction } from '../../../../store/reducers/allProductsReducer';
 
 export default function FilterForm() {
 

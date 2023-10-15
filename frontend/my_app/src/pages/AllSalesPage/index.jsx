@@ -1,5 +1,5 @@
 import React from 'react'
-import DiscFiltrSortForm from '../../components/FilterForms/DiscFiltrSortForm'
+import DiscFiltrSortForm from '../../components/UI/FilterForms/DiscFiltrSortForm'
 import ProductsContainer from '../../components/ProductsContainer'
 import { useSelector } from 'react-redux'
 

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import ProductsContainer from '../../components/ProductsContainer'
-import DiscFiltrSortForm from '../../components/FilterForms/DiscFiltrSortForm'
+import DiscFiltrSortForm from '../../components/UI/FilterForms/DiscFiltrSortForm'
 
 
 export default function ProductsByCategoriesPage() {

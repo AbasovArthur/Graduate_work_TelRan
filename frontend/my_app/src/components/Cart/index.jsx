@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './style.module.css'
 // import { clearCartAction } from '../../store/redusers/cartReducer';
@@ -11,11 +11,6 @@ export default function Cart({ h1 }) {
 
     const cart_state = useSelector(state => state.cart)
 
-    useEffect(() => {
-        localStorage.setItem('shopping_cart', JSON.stringify(cart_state))
-    }, [cart_state])
-
-    const dispatch = useDispatch()
 
     const total = cart_state
         .reduce((acc, { price, count }) => acc + price * count, 0)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { getDiscountPropuctsAction } from '../../../store/reducers/allProductsReducer'
+import { getDiscountPropuctsAction } from '../../../../store/reducers/allProductsReducer'
 import s from './style.module.css'
 
 
