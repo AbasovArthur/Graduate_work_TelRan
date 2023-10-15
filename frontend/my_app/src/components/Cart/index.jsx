@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './style.module.css'
 // import { clearCartAction } from '../../store/redusers/cartReducer';
+import FormItem from '../UI/FormUI/FormItem';
 import { orderPhoneNum } from '../../requests/products_req';
 
 
@@ -11,7 +12,7 @@ export default function Cart({ h1 }) {
     const cart_state = useSelector(state => state.cart)
 
     useEffect(() => {
-      localStorage.setItem('shopping_cart', JSON.stringify(cart_state))
+        localStorage.setItem('shopping_cart', JSON.stringify(cart_state))
     }, [cart_state])
 
     const dispatch = useDispatch()
@@ -48,6 +49,14 @@ export default function Cart({ h1 }) {
                             <span> $</span>
                         </p>
                     </div>
+
+                    <FormItem
+                        input_style_item='input_for_cart'
+                        btn_style_item='btn_for_card'
+                        title_btn='Order'
+                        onSubmit={orderPhoneNum}
+                        title_modalWindow='order product'
+                    />
 
                 </div>
 

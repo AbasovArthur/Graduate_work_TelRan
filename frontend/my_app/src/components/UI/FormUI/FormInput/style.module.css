@@ -1,0 +1,23 @@
+.input{
+  padding: 14px 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid white;
+  outline: none;
+}
+
+.input:focus {
+  border: 2px solid green;
+}
+
+.input_for_main {
+  border: 2px solid white;
+  padding: 15px;
+  border-radius: 16px;
+}
+
+.input_for_cart {
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 16px;
+}
