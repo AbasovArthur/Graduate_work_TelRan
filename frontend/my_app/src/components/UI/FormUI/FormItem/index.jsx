@@ -4,6 +4,7 @@ import FormButton from '../FormButton'
 import FormInput from '../FormInput'
 import s from './style.module.css'
 import { useForm } from 'react-hook-form'
+import ModalWindow from '../../ModalWindow'
 
 export default function FormItem(props) {
 
@@ -47,7 +48,7 @@ export default function FormItem(props) {
         >
           {props.title_btn}
         </FormButton>
-
+          <ModalWindow onInitiate={showModal} title_modalWindow={props.title_modalWindow}/>
       </div>
     </form>
   )
