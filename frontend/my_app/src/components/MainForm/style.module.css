@@ -1,0 +1,28 @@
+.form{
+    background: linear-gradient(
+        262.69deg,
+        rgba(0, 99, 0, 1) 100%,
+        rgba(51, 153, 51, 1) 0%
+      );
+      width: auto;
+      height: auto;
+      padding: 30px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.form img {
+  margin: 0 auto;
+  width: 60%;
+  height: auto;
+}
+
+.form_offer h1 {
+  color: white;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
