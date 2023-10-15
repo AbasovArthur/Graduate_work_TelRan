@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import ProductsContainer from '../../components/ProductsContainer'
+import DiscFiltrSortForm from '../../components/FilterForms/DiscFiltrSortForm'
 
 
 export default function ProductsByCategoriesPage() {
@@ -18,6 +19,7 @@ export default function ProductsByCategoriesPage() {
 
   return (
     <div>
+      <DiscFiltrSortForm discount_show={true}/>
       <h1>{title_category?.title}</h1>
       <ProductsContainer products={product_by_category} />
     </div>

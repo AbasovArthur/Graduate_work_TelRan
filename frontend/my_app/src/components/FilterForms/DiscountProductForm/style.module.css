@@ -1,0 +1,52 @@
+.discount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 15px;
+}
+
+.discount > p {
+    font: 600 20px/130% "Montserrat", sans-serif;
+    margin: auto 0;
+}
+
+.toggler > input {
+    display: none;
+}
+
+.toggler {
+    display: block;
+    width: 60px;
+    height: 31px;
+    border: 2px solid green;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    /* background-color: white;  */
+}
+
+.toggler.active {
+    background-color: green;
+  }
+
+.toggler > .ball {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    border-radius: 50%;
+    transition: left 0.2s ease-in-out;
+}
+
+
+.toggler > input:checked ~ .ball {
+    left: calc(100% - 26px);
+    background-color: white;
+}
+
+.toggler > input:checked + .ball + .toggler {
+    background-color: green; 
+}

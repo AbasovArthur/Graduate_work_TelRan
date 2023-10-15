@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import ProductsContainer from '../../components/ProductsContainer'
+import DiscFiltrSortForm from '../../components/FilterForms/DiscFiltrSortForm'
 
 export default function AllProductsPage() {
 
@@ -8,6 +9,7 @@ export default function AllProductsPage() {
 
   return (
     <div>
+      <DiscFiltrSortForm discount_show={true}/> 
       <ProductsContainer products={all_products_state} h1={'All products'} />
     </div>
   )
