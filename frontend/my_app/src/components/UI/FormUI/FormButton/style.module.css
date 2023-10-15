@@ -24,3 +24,17 @@
   background-color: white; color: green;
   border: 2px solid green;
 }
+
+.btn_for_nawbar {
+  background-color: white; color: green; 
+  padding: 10px;
+  border: 2px solid green; border-radius: 5px;
+  cursor: pointer;
+  font: 700 16px "Montserrat", sans-serif;
+}
+
+.btn_for_nawbar:hover {
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+}

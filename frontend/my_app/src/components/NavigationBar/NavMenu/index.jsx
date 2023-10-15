@@ -4,6 +4,7 @@ import { PiHandbagLight } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
 import s from './style.module.css'
 import BugerMenu from '../BugerMenu'
+import FormButton from '../../UI/FormUI/FormButton'
 
 export default function NavMenu() {
 
@@ -18,7 +19,7 @@ export default function NavMenu() {
 
       <div className={s.button} >
         <Link to={'/categories'}>
-          <button>categories</button>
+          <FormButton btn_style_item='btn_for_nawbar'>categories</FormButton>
         </Link>
       </div>
 
