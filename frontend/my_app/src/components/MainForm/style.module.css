@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  transition: height 0.3s ease;
 }
 
 .form img {
@@ -25,4 +26,36 @@
   color: white;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  align-items: center
+}
+
+
+@media(max-width: 860px) {
+
+    .form {
+      height: 400px;
+      grid-template-columns: 1fr 2fr;
+      transition: height 0.3s ease;
+      padding: 10px 20px ;
+    }
+
+}
+
+@media(max-width: 720px) {
+  .form img {
+      display: none;
+  }
+
+  .form {
+    height: auto;
+    grid-template-columns: 1fr;
+    transition: height 0.3s ease;
+  }
+
+  .form_offer h1 {
+    display: grid;
+    align-items: end;
+    height: 200px;
+  }
+
 }

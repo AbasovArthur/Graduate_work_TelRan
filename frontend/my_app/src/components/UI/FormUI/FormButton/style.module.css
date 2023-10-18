@@ -1,4 +1,3 @@
-/* frontend\app\src\components\FormButton\style.module.css */
 .button {
   border-radius: 16px;
   background-color: green;  color: white;
@@ -35,6 +34,18 @@
 
 .btn_for_nawbar:hover {
   border-radius: 10px;
+  background-color: green;
+  color: white;
+}
+
+.btn_for_mainBanner {
+  background: #ffffff;
+  color: black;
+  padding: 25px 50px;
+  font: 700 25px/130% "Montserrat", sans-serif;
+}
+
+.btn_for_mainBanner:hover {
   background-color: green;
   color: white;
 }

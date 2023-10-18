@@ -1,10 +1,14 @@
+.item {
+    margin: 0 20px;
+}
+
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    justify-content: end;
-    justify-items: center;
+    grid-template-areas: "shopping_card details";
     gap: 50px;
 }
+
 .container_cart {
     display: grid;
     gap: 20px;
@@ -48,4 +52,28 @@
     border-radius: 10px;
     cursor: pointer;
     width: fit-content;
-  }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .shopping_card { grid-area: shopping_card;}
+    .details       { grid-area: details;      }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "shopping_card"
+                             "details";
+        gap: 35px;
+    }
+
+    .details {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .details {
+        width: 100%;
+    }
+}

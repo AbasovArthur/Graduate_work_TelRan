@@ -12,6 +12,11 @@
     justify-self: start;
 }
 
+.cart a svg {
+    width: 25px;
+    height: auto;
+}
+
 .nav_head {
     display: grid;
     grid-template-columns: 100px 200px 1fr 100px;
@@ -20,78 +25,29 @@
     justify-items: center;
 }
 
-@media (max-width: 576px) {
-
+@media only screen and (min-width: 481px) and (max-width: 768px) {
     .nav_head {
-        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "logo button cart navmenu";
+        grid-template-columns: 100px 1fr 100px 100px;
+    }
+
+    .button {
+        justify-self: start;
+    }
+
+    .cart {
+        justify-self: center;
         align-items: center;
     }
-    .cart {
-        justify-self: end;
-    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.logo {
-    width: 72px; height: 72px;
-    padding: 10px;
-}
-
-.logo       { grid-area: logo;      }
-.button     { grid-area: button;    }
-.naw_menu   { grid-area: naw_menu;  }
-.cart       { grid-area: cart;      }
-
-.nav_head {
-    display: grid;
-    grid-template-columns: 100px 1fr 3fr 100px;
-    grid-template-areas: "logo button naw_menu cart";
-    align-items: center;
-    justify-items: center;
-}
-
-.naw_menu{
-    display: flex;
-    gap: 50px;
-}
-.icon {
-    display: none;
-}
-
-@media (max-width: 576px) {
-
+@media only screen and (max-width: 480px) {
     .nav_head {
-        grid-template-columns: 100px 1fr 100px 1fr;
-        grid-template-areas: "logo button cart naw_menu";
+        grid-template-areas: "logo button cart navmenu";
+        grid-template-columns: 100px 100px 50px 50px ;
+        justify-content: space-between;
+        gap: 5px;
     }
-    .item {
-        visibility: hidden;
-    }
-    .item .active {
-        visibility: visible;
-    }
-    .icon {
-        display: block;
-    }
-
 }
-*/
+
+

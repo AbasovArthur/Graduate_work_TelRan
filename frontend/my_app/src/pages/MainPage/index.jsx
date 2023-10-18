@@ -9,7 +9,7 @@ export default function MainPage() {
       <MainBanner />
       <MainSliseContainer show_slise_category/>
       <MainForm />
-      <MainSliseContainer show_slise_sales/>
+      <MainSliseContainer show_slise_sales />
     </div>
   )
 }

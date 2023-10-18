@@ -1,8 +1,23 @@
 .discount {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: start;
     gap: 15px;
+}
+
+@media only screen and (max-width: 1124px) {
+    .discount {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .discount:hover {
+        border-bottom: 1px dotted black;
+    }
 }
 
 .discount > p {

@@ -1,30 +1,52 @@
 .icon {
     display: none;
+    width: 25px;
+    height: auto;
+    cursor: pointer;
 }
 
 .link {
+    width: 500px;
     display: flex;
-    gap: 30px;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-@media (max-width: 576px){
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .link {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     .icon {
         display: block;
     }
 
+
     .link {
         display: none;
+        width: 100%;
+        height: auto;
+        transform: translateY(-100%);
     }
     
     .link.active {
+        visibility: visible;
+
         position: fixed;
-        right: 10px;
+        right: 0;
+
+        z-index: 2;
+        transform: translateY(0);
 
         display: flex;
         flex-direction: column;
         gap: 25px;
 
-        border-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        text-align: center;
         padding: 20px 10px;
         margin: 15px 0;
         background-color: green;
@@ -33,6 +55,15 @@
 
     .link.active a {
         color: white;
+        padding: 10px 5px;
+        margin: auto 50px;
     }
 
+    .link.active a:hover {
+        border: 1px solid white;
+        border-radius: 12px;
+    }
 }
+
+
+

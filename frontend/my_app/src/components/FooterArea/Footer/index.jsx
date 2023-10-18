@@ -7,8 +7,8 @@ import Contact from '../Contact'
 export default function Footer() {
   return (
     <div className={s.footer}>
-      <Contact h2='Contact'className={s.contact}/>
-      <Address h2='Address'className={s.address}/>
+        <Contact h2='Contact'className={s.contact}/>
+        <Address h2='Address'className={s.address}/>
 
       <div className={s.map}>
         <iframe

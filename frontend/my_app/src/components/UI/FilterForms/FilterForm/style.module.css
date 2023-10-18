@@ -18,3 +18,34 @@
     border: none;
     outline: none;
 }
+
+@media only screen and (max-width: 1124px) {
+
+    .filter_form input[name="min"] {  grid-area: min;  }
+    .filter_form input[name="max"] {  grid-area: max;  }
+    .filter_form button            {  grid-area: btn;  }
+
+    .filter_form {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 100px 100px ;
+        grid-template-areas: 
+        "min max" 
+        "btn btn";
+    }
+
+    .filter_form input {
+        padding: 4px 7px;
+        border-radius: 7px;
+        font: 500 16px/130% "Montserrat", sans-serif;
+        color: #797979;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .filter_form:hover {
+        border-bottom: 1px dotted black;
+    }
+}

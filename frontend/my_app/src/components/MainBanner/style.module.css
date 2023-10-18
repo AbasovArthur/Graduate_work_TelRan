@@ -1,7 +1,5 @@
 .offer  {grid-area: offer; justify-self: center; align-self: center;}
-.img  {grid-area: img;}
-
-
+.img    {grid-area: img;}
 
 .banner {
     display: grid;
@@ -26,7 +24,7 @@
     transition: height 0.8s ease;
 }
 
-.banner > div > h1 {
+.banner>div>h1 {
     display: flex;
     flex-direction: column;
     color: #ffffff;
@@ -34,35 +32,57 @@
     transition: height 0.3s ease;
 }
 
-.banner > div > h1 > span:last-child {
+.banner>div>h1>span:last-child {
     font: 700 63px/130% "Montserrat", sans-serif;
 }
 
-.button {
-    background: #ffffff;
-    border: none;
-    border-radius: 13px;
-    padding: 25px 50px;
-    font: 700 25px/130% "Montserrat", sans-serif;
-}
-
-@media(max-width: 1080px){
+@media(max-width: 1080px) {
     .img {
         height: 550px;
         position: absolute;
         bottom: -133px;
         right: -203px;
     }
+
 }
 
-@media(max-width: 800px){
+@media(max-width: 860px) {
+    .offer {
+        margin: 0 20px;
+    }
+
+    .img {
+        height: 490px;
+    }
+
+    .banner {
+        height: 400px;
+        transition: height 0.3s ease;
+
+    }
+
+    .banner>div>h1 {
+        font: 700 63px/130% "Montserrat", sans-serif;
+    }
+
+    .banner>div>h1>span:last-child {
+        font: 700 48px/130% "Montserrat", sans-serif;
+    }
+}
+
+@media(max-width: 720px) {
     .img {
         display: none;
     }
-    
+
     .banner {
         grid-template-columns: 1fr;
         grid-template-areas: 'offer';
-        height: 600px;
     }
+
+    .offer,
+    .offer h1 {
+        text-align: center;
+    }
+
 }

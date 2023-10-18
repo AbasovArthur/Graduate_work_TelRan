@@ -19,19 +19,20 @@ export default function Cart({ h1 }) {
         .split('.');
 
     return (
-        <div>
+        <div className={s.item}>
             <h1>{h1}</h1>
             <div className={s.container}>
-
-                {cart_state.length === 0
-                    ? (<p>Корзина пуста, товаров нет</p>)
-                    : (<>
-                        <div className={s.container_cart}>
-                            {cart_state.map(el =>
-                                <CartItem key={el.id} {...el} />)}
-                        </div>
-                    </>)
-                }
+                <div className={s.shopping_card}>
+                    {cart_state.length === 0
+                        ? (<p>Корзина пуста, товаров нет</p>)
+                        : (<>
+                            <div className={s.container_cart}>
+                                {cart_state.map(el =>
+                                    <CartItem key={el.id} {...el} />)}
+                            </div>
+                        </>)
+                    }
+                </div>
 
                 <div className={s.details}>
 

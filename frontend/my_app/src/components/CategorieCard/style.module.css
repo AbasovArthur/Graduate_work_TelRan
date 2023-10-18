@@ -13,3 +13,41 @@
     object-fit: cover;
     border-radius: 8px;
 }
+
+@media only screen and (max-width: 1420px){
+    .img {
+        width: 380px;
+    }   
+}
+
+@media only screen and (max-width: 1220px){
+    .img {
+        width: 360px;
+    }   
+}
+
+@media only screen and (max-width: 1200px){
+    .img {
+        width: 325px;
+        height: 318px;
+    }   
+}
+
+@media only screen and (max-width: 1080px){
+    .img {
+        width: 280px;
+        height: 260px;
+    }   
+}
+
+@media only screen and (max-width: 920px){
+    .img {
+        width: 230px;
+    }   
+}
+
+@media only screen and (max-width: 560px){
+    .img {
+        margin: 0 auto;
+    }
+}

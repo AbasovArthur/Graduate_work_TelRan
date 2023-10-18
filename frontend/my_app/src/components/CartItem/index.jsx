@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './style.module.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { decremProdAction, deleteFromCardAction, incremProdAction } from '../../store/reducers/cartReducer'
 import { RxCross2 } from "react-icons/rx"
 

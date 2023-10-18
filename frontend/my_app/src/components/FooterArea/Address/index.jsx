@@ -3,7 +3,7 @@ import s from './style.module.css'
 
 export default function Address({h2}) {
     return (
-        <div>
+        <div className={s.container}>
             <h2>{h2}</h2>
             <h2>
                 <a

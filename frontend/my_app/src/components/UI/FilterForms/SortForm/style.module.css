@@ -1,15 +1,35 @@
 .sort_form {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: end;
     gap: 15px;
 } 
 .sort_form select {
     padding: 9px 10px;
     border-radius: 7px;
+    border: 2px solid black;
     font: 500 16px/130% "Montserrat", sans-serif;
     color: #797979;
 }
 .sort_form p {
     font: 600 20px/130% "Montserrat", sans-serif;
+}
+
+@media only screen and (max-width: 1124px) {
+    .sort_form {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .sort_form select {
+        padding: 4px 7px;
+
+    }
+}
+@media only screen and (max-width: 768px) {
+    .sort_form:hover {
+        border-bottom: 1px dotted black;
+    }
 }

@@ -4,6 +4,7 @@
 
 
 .footer {
+    margin: 50px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -23,7 +24,7 @@
                              "address"
                              "map";
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 35px;
     }
     .footer > div:not(:last-child){
         display: grid;

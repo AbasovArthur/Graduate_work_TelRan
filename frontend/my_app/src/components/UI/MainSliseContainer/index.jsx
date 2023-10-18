@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import s from './style.module.css'
 import CategoriesContainer from '../../CategoriesContainer'
 import ProductsContainer from '../../ProductsContainer'
 import { useSelector } from 'react-redux';
@@ -10,11 +11,11 @@ export default function MainSliseContainer({ show_slise_category, show_slise_sal
 
     useEffect(() => {
         const handle_resize = () => {
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth <= 560) {
                 setVisibleCard(1)
-            } else if (window.innerWidth <= 768) {
+            } else if (window.innerWidth <= 800) {
                 setVisibleCard(2)
-            } else if (window.innerWidth <= 1280) {
+            } else if (window.innerWidth <= 1420) {
                 setVisibleCard(3)
             } else {
                 setVisibleCard(limit)
@@ -47,7 +48,7 @@ export default function MainSliseContainer({ show_slise_category, show_slise_sal
         .slice(0, visibleCard);
 
     return (
-        <div>
+        <div className={s.container}>
             {show_slise_category &&
                 <CategoriesContainer categories={show_category} h1={'Catalog'} />
             }

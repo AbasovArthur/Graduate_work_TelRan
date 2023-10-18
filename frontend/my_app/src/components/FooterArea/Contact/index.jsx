@@ -5,7 +5,7 @@ import { PiWhatsappLogoLight } from 'react-icons/pi'
 
 export default function Contact({h2}) {
     return (
-        <div>
+        <div className={s.container}>
             <h2>{h2}</h2>
             <p className={s.tel_number}><span>+49 999 999 99 99</span></p>
 

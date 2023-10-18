@@ -1,5 +1,18 @@
 .filter_forms {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .filter_forms {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-top: 1px dotted black;
+        border-bottom: 1px dotted black;
+        padding: 8px 0 15px;
+    }
 }

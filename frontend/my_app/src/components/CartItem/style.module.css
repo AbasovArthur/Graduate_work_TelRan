@@ -13,13 +13,11 @@
     gap: 20px;
 }
 
-
 .products img {
     width: 200px;
     height: 200px;
     object-fit: cover;
 } 
-
 
 .products_descr {
     display: grid;
@@ -32,7 +30,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
 .price h2 span:first-child {
@@ -69,3 +67,91 @@
     text-decoration: line-through;
 }
 
+@media only screen and (max-width: 1080px){
+    .products{
+        grid-template-columns: 200px 1fr 1fr 20px;
+        gap: 20px;
+    }
+    .price {
+        grid-template-columns: 2fr 1fr;
+        align-items: baseline;
+    }
+    .products_descr {
+        align-items: center;
+        justify-items: center;
+        grid-template-rows: 1fr 1fr ;
+
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .products{
+        grid-template-columns: 200px 1fr 100px 20px;
+        justify-items: end;
+    }
+    .price {
+        grid-template-columns: 2fr 1fr;
+        align-items: baseline;
+        justify-items: end;
+    }
+
+    .price h2 span:first-child {
+        font: 600 24px/130% "Montserrat", sans-serif;
+    }
+    
+    .price h2 span {
+        font: 600 16px/130% "Montserrat", sans-serif;
+    }
+    
+    .price h2 span:nth-child(3) {
+        font: 600 14px/130% "Montserrat", sans-serif;
+    }
+
+}
+
+@media only screen and (max-width: 560px){
+    .products img { grid-area: img; }
+    .products_descr { grid-area: products_descr; }
+    .price { grid-area: price; }
+   
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 20px;
+        justify-items: start;
+        grid-template-areas: "img            price"
+                             "products_descr price";
+    }
+    
+    .products_descr {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .price {
+        grid-template-rows: 1fr 1fr ;
+        justify-items: end;
+        align-self: center;
+    }
+
+    .price h2 {
+        grid-row: 1 ;
+    }
+
+    .price p {
+        grid-row: 2 ;
+    }
+    
+}
+
+@media only screen and (max-width: 420px){
+    .products span { grid-area: cross; }
+
+    .products {
+        grid-template-columns: 1fr 20px;
+        justify-items: center;
+        grid-template-areas: 
+                             "img            cross"
+                             "price          cross"
+                             "products_descr cross";
+    }
+}
