@@ -2,6 +2,23 @@
     margin: 0 20px;
 }
 
+.cart_empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cart_empty svg {
+    width: 50px;
+    height: 50px;
+}
+
+.cart_empty p {
+    font: 600 28px/130% "Montserrat", sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;

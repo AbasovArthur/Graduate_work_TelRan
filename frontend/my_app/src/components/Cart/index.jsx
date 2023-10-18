@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
+import { BsCartX } from 'react-icons/bs'
+
 import { useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './style.module.css'
 // import { clearCartAction } from '../../store/redusers/cartReducer';
 import FormItem from '../UI/FormUI/FormItem';
 import { orderPhoneNum } from '../../requests/products_req';
+import { Link } from 'react-router-dom';
 
 
 export default function Cart({ h1 }) {
@@ -24,7 +27,14 @@ export default function Cart({ h1 }) {
             <div className={s.container}>
                 <div className={s.shopping_card}>
                     {cart_state.length === 0
-                        ? (<p>Корзина пуста, товаров нет</p>)
+                        ? (
+                            <Link to={'/products'}>
+                                <div className={s.cart_empty}>
+                                    <BsCartX />
+                                    <p>Корзина пуста, товаров нет</p>
+                                </div>
+                            </Link>
+                        )
                         : (<>
                             <div className={s.container_cart}>
                                 {cart_state.map(el =>
