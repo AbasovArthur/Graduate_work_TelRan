@@ -14,7 +14,6 @@ export default function Cart({ h1 }) {
 
     const cart_state = useSelector(state => state.cart)
 
-
     const total = cart_state
         .reduce((acc, { price, count }) => acc + price * count, 0)
         .toFixed(2)

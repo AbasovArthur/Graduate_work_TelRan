@@ -22,4 +22,7 @@
     .container {
         margin: 0 20px;
     }
+    .link {
+        font: 600 24px/130% "Montserrat", sans-serif;
+    }
 }

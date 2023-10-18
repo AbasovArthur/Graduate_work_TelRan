@@ -71,9 +71,8 @@
     width: fit-content;
 }
 
-
-
 @media only screen and (max-width: 1200px) {
+
     .shopping_card { grid-area: shopping_card;}
     .details       { grid-area: details;      }
 

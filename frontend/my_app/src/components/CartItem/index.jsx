@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { decremProdAction, deleteFromCardAction, incremProdAction } from '../../store/reducers/cartReducer'
 import { RxCross2 } from "react-icons/rx"
 
-export default function CartItem({ count, id, title, image, description, discont_price, price }) {
+export default function CartItem({ count, id, title, image, discont_price, price }) {
 
     const dispatch = useDispatch()
     const price_fix = (price * count).toFixed(2).toString().split('.')
